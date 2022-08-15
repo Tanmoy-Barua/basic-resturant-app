@@ -5,6 +5,7 @@ const Body = () => {
   return (
     <>
         <Menu/>
+      {/* <h1>Body</h1> */}
     </>
   )
 }

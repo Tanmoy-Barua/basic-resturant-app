@@ -1,0 +1,27 @@
+.card{
+    margin: 15px;
+}
+.card-img-overlay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-title{
+    display: inline-block;
+    font-size: 20px;
+    background-color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.card-title:hover{
+    box-shadow: 10px 5px 20px grey;
+    transition: 0.5s ease-in-out;
+}
+.animation{
+    transition: 0.5s ease-in-out;
+}
+
+span{
+    color: #bebebe;
+}

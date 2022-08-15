@@ -9,7 +9,7 @@ const LoadComments = (props) => {
                 return (
                     <div key={item.id}>
                         <h5>{item.author}</h5>
-                        <p>{dateFormat(item.date, "dddd, mmmm dS, yyyy, h:MM:ss TT")}</p>
+                        <span>{dateFormat(item.date, "isoDateTime")}</span>
                         <p>{item.comment}</p>
                     </div>
                 )

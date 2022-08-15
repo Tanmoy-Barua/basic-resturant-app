@@ -1,19 +1,23 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import {Card, CardImg, CardImgOverlay, CardBody, CardTitle} from 'reactstrap'
+
 
 const MenuItem = (props) => {
  
   return (
-    <div>
+    <>
+      <div className="col-md-3">
         <Card>
             <CardBody>
-                <CardImg width="100%" alt={props.dish.name} src={props.dish.image}/> 
+                <CardImg alt={props.dish.name} src={props.dish.image}/> 
                 <CardImgOverlay>
-                    <CardTitle onClick={()=>props.OnDishDetails(props.dish)}>{props.dish.name}</CardTitle>
+                    <Link to={'/menu-details/'+props.dish.id} state={{item : props.dish}}><CardTitle onClick={()=>props.OnDishDetails(props.dish)}>{props.dish.name}</CardTitle></Link>
                 </CardImgOverlay>
             </CardBody>
         </Card>
-    </div>
+      </div>
+    </>
   )
 }
 
