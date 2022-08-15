@@ -12,7 +12,7 @@ const MenuItem = (props) => {
             <CardBody>
                 <CardImg alt={props.dish.name} src={props.dish.image}/> 
                 <CardImgOverlay>
-                    <Link to={'/menu-details/'+props.dish.id} state={{item : props.dish}}><CardTitle onClick={()=>props.OnDishDetails(props.dish)}>{props.dish.name}</CardTitle></Link>
+                    <Link to={'/menu-details/'+props.dish.name} state={{item : props.dish}}><CardTitle onClick={()=>props.OnDishDetails(props.dish)}>{props.dish.name}</CardTitle></Link>
                 </CardImgOverlay>
             </CardBody>
         </Card>
