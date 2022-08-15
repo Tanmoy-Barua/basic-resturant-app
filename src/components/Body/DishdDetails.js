@@ -1,12 +1,7 @@
-import React from 'react'
-import LoadComments from './LoadComments'
-import {Card, CardImg, CardBody, CardTitle, CardText} from 'reactstrap'
+import React from 'react';
+import { Card, CardBody, CardImg, CardText, CardTitle } from 'reactstrap';
 const DishdDetails = (props) => {
-    console.log(props.dish.comments);
-
-    const Loadcomments = props.dish.comments.map(item => {
-      return item
-    }) 
+    const comments = props.dish.comments;
     
   return (
     <div>
@@ -17,10 +12,12 @@ const DishdDetails = (props) => {
                 <CardText>{props.dish.description}
                 <p>BDT {props.dish.price}</p>
                 </CardText>
-                {/* <p>BDT {props.dish.comments}</p> */}
+                {
+                  comments.map(x=> <p>{x.comment}</p>)
+                }
                 <hr />
                 {/* <LoadComments comments={props.dish.comments} /> */}
-                {console.log(Loadcomments)}
+                {/* {console.log(Loadcomments)} */}
             </CardBody>
         </Card>
     </div>
