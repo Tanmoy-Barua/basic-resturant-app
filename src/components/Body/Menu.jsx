@@ -4,7 +4,8 @@ import MenuItem from './MenuItem'
 import DishDetails from './DishdDetails'
 
 const Menu = () => {
-    const [dishes, setDishes] = useState(DISHES);
+    const dishes = DISHES;
+    // setDishes()
     const [selectedDish, setSelectedDish] = useState(null);
 
     const OnDishDetails = dish => {
