@@ -5,14 +5,14 @@ import DishDetails from './DishdDetails'
 
 const Menu = () => {
     const [dishes, setDishes] = useState(DISHES);
-    const [selectedDish, setSelectedDish] = useState([]);
+    const [selectedDish, setSelectedDish] = useState(null);
 
     const OnDishDetails = dish => {
         setSelectedDish(dish)
     }
 
     let dishDetails = null;
-    if(selectedDish!=null){
+    if(selectedDish!==null){
         dishDetails = <DishDetails dish={selectedDish}/>
     }
   return (
