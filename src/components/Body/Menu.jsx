@@ -1,9 +1,10 @@
 import React, {useState} from 'react'
 import DISHES from '../../data/dishes'
 import MenuItem from './MenuItem'
-import DishDetails from './DishdDetails'
+// import DishDetails from './DishdDetails'
 
 const Menu = () => {
+    document.title = "Menu | Resturant";
     const dishes = DISHES;
     // setDishes()
     const [selectedDish, setSelectedDish] = useState(null);
@@ -12,9 +13,9 @@ const Menu = () => {
         setSelectedDish(dish)
     }
 
-    let dishDetails = null;
+    // let dishDetails = null;
     if(selectedDish!==null){
-        dishDetails = <DishDetails dish={selectedDish}/>
+        // dishDetails = <DishDetails dish={selectedDish}/>
     }
   return (
     <>

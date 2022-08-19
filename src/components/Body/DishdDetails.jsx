@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
 import LoadComments from './LoadComments'
 import { Card, CardBody, CardImg, CardText, CardTitle } from 'reactstrap';
 import Header from '../Header/Header'
@@ -18,7 +19,7 @@ const DishdDetails = (props) => {
 
     <div>
       <Header />
-        <Card style={{width:"50%", margin: "10px auto"}}>
+        <Card style={{width:"90%", margin: "10px auto"}}>
             <CardImg top src={"../"+dishItem.item.image} alt={dishItem.item.name} className="animate__animated animate__fadeInDown img-fluid"/>
             <CardBody style={{textAlign: 'left'}}>
                 <CardTitle>{dishItem.item.name}</CardTitle>
@@ -28,6 +29,7 @@ const DishdDetails = (props) => {
                 <hr />
                 <LoadComments comments={dishItem.item.comments} />
                 {/* {console.log(Loadcomments)} */}
+                <Link to="/menu" className="btn btn-secondary"><i className="fa-solid fa-angles-left"></i> Back</Link>
             </CardBody>
         </Card>
     </div>

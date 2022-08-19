@@ -1,5 +1,5 @@
 import React from "react";
-import {BrowserRouter, Routes,Route} from 'react-router-dom'
+import {BrowserRouter, Routes,Route, Switch, Navigate} from 'react-router-dom'
 import 'animate.css';
 import './App.css';
 import Menu from './components/Body/Menu'
@@ -15,11 +15,12 @@ function App() {
     <>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home/>}/>
+        <Route path="/home" element={<Home/>}/>
         <Route path="/menu" element={<MainComponent/>}/>
         <Route path="/menu-details/:id" element={<DishdDetails/>}/>
         <Route path="/about" element={<About/>}/>
         <Route path="/contact" element={<Contact/>}/>
+        <Route path="/" element={<Navigate to="/home" />}/>
         </Routes>
     </BrowserRouter>
     </>
