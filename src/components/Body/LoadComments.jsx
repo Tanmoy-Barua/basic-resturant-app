@@ -9,6 +9,7 @@ const LoadComments = (props) => {
                 return (
                     <div key={item.id}>
                         <h5>{item.author}</h5>
+                        <p>{item.rating} / 10</p>
                         <span>{dateFormat(item.date, "isoDateTime")}</span>
                         <p>{item.comment}</p>
                     </div>

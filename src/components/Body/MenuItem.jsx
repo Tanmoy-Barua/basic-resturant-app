@@ -4,7 +4,7 @@ import {Card, CardImg, CardImgOverlay, CardBody, CardTitle} from 'reactstrap'
 
 
 const MenuItem = (props) => {
- 
+  console.log(props);
   return (
     <>
       <div className="col-md-3">

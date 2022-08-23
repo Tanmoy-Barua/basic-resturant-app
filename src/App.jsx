@@ -1,5 +1,5 @@
 import React from "react";
-import {BrowserRouter, Routes,Route, Switch, Navigate} from 'react-router-dom'
+import {BrowserRouter, Routes,Route, Navigate} from 'react-router-dom'
 import 'animate.css';
 import './App.css';
 import Menu from './components/Body/Menu'
@@ -9,10 +9,14 @@ import Contact from './components/Body/Contact'
 import MainComponent from './components/MainComponent';
 import DishdDetails from './components/Body/DishdDetails'
 import Body from './components/Body/Body'
+import myStore from './redux/store'
+import {Provider} from 'react-redux'
 
 function App() {
+  
   return (
     <>
+    <Provider store={myStore}>
     <BrowserRouter>
       <Routes>
         <Route path="/home" element={<Home/>}/>
@@ -21,8 +25,9 @@ function App() {
         <Route path="/about" element={<About/>}/>
         <Route path="/contact" element={<Contact/>}/>
         <Route path="/" element={<Navigate to="/home" />}/>
-        </Routes>
+      </Routes>
     </BrowserRouter>
+    </Provider>
     </>
   );
 }

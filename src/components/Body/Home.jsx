@@ -1,8 +1,10 @@
 import React from 'react'
 import Header from '../Header/Header'
 
-const Home = () => {
+const Home = (props) => {
   document.title = "Home | Resturant";
+  
+  // console.log(props);
   return (
     <>
     <Header />
